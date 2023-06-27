@@ -10,17 +10,14 @@ public class VirtualPet {
 
     private int thirst;
 
-    private int boredom;
-
     private int sickness;
 
-    public VirtualPet(String petName, int levelHappiness, int levelHunger, int levelThirst, int levelBoredom, int levelSickness) {
+    public VirtualPet(String petName) {
         this.name = petName;
-        this.happiness = levelHappiness;
-        this.hunger = levelHunger;
-        this.thirst = levelThirst;
-        this.boredom = levelBoredom;
-        this.sickness = levelSickness;
+        this.happiness = 100;
+        this.hunger = 100;
+        this.thirst = 100;
+        this.sickness = 100;
     }
 
     public String getName() {
@@ -55,14 +52,6 @@ public class VirtualPet {
         this.thirst = thirst;
     }
 
-    public int getBoredom() {
-        return this.boredom;
-    }
-
-    public void setBoredom(int boredom) {
-        this.boredom = boredom;
-    }
-
     public int getSickness() {
         return this.sickness;
     }
@@ -70,4 +59,31 @@ public class VirtualPet {
     public void setSickness(int sickness) {
         this.sickness = sickness;
     }
+
+    public void play() {
+        this.happiness = this.happiness - 5;
+        this.hunger = this.hunger + 2;
+        this.thirst = this.thirst +3;
+    }
+
+    public void feed() {
+        this.hunger = this.hunger - 5;
+        this.thirst = this.thirst + 2;
+    }
+
+    public void water() {
+        this.thirst = this.thirst - 5;
+    }
+
+    public void takeToVet() {
+        this.sickness = this.sickness - 20;
+    }
+
+    public void tick() {
+        this.happiness = this.happiness +3;
+        this.hunger = this.hunger +3;
+        this.thirst = this.thirst +3;
+        this.sickness = this.sickness +3;
+    }
+
 }
