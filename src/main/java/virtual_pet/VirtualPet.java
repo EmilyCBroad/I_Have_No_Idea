@@ -14,10 +14,10 @@ public class VirtualPet {
 
     public VirtualPet(String petName) {
         this.name = petName;
-        this.happiness = 100;
+        this.happiness = 0;
         this.hunger = 100;
         this.thirst = 100;
-        this.sickness = 100;
+        this.sickness = 0;
     }
 
     public String getName() {
