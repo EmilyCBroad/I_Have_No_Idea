@@ -15,8 +15,8 @@ public class VirtualPet {
     public VirtualPet(String petName) {
         this.name = petName;
         this.happiness = 0;
-        this.hunger = 100;
-        this.thirst = 100;
+        this.hunger = 50;
+        this.thirst = 50;
         this.sickness = 0;
     }
 
@@ -61,29 +61,31 @@ public class VirtualPet {
     }
 
     public void play() {
-        this.happiness = this.happiness - 5;
-        this.hunger = this.hunger + 2;
-        this.thirst = this.thirst +3;
+        this.happiness = this.happiness - 10;
+        this.hunger = this.hunger + 8;
+        this.thirst = this.thirst + 8;
+        this.sickness = this.sickness + 1;
     }
 
     public void feed() {
-        this.hunger = this.hunger - 5;
-        this.thirst = this.thirst + 2;
+        this.hunger = this.hunger - 10;
+        this.thirst = this.thirst + 3;
     }
 
     public void water() {
-        this.thirst = this.thirst - 5;
+        this.thirst = this.thirst - 10;
     }
 
     public void takeToVet() {
-        this.sickness = this.sickness - 20;
+        this.sickness = this.sickness - 10;
     }
 
     public void tick() {
-        this.happiness = this.happiness +3;
-        this.hunger = this.hunger +3;
-        this.thirst = this.thirst +3;
-        this.sickness = this.sickness +3;
+        this.happiness = this.happiness + 3;
+        this.hunger = this.hunger + 3;
+        this.thirst = this.thirst + 3;
+        this.sickness = this.sickness + 3;
     }
-
+     
 }
+
